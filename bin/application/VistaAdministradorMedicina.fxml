@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="429.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorAdministradorMedicina">
+   <children>
+      <Button layoutX="269.0" layoutY="400.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+      <TabPane fx:id="tbPanel" layoutX="1.0" prefHeight="403.0" prefWidth="575.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabPresentacion" text="Presentación de Medicamentos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="376.0" prefWidth="556.0">
+                           <children>
+                              <TableView fx:id="tblPresentacion" layoutX="184.0" layoutY="150.0" prefHeight="150.0" prefWidth="241.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoPresentacion" prefWidth="136.0" text="Código Presentación" />
+                                    <TableColumn fx:id="clmnpresentacion" minWidth="2.0" prefWidth="94.0" text="Presentación" />
+                                 </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="106.0" layoutY="307.0" prefHeight="48.0" prefWidth="369.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#limpiarPresentacion" text="Nuevo" />
+                                    <Button fx:id="btnGuardarPresentacion" mnemonicParsing="false" onAction="#guardarPresentacion" text="Guardar" />
+                                    <Button fx:id="btnActualizarPresentacion" disable="true" mnemonicParsing="false" onAction="#actualizarPresentacion" text="Actualizar" />
+                                    <Button fx:id="btnEliminarPresentacion" disable="true" mnemonicParsing="false" onAction="#eliminarPresentacion" text="Eliminar" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="170.0" layoutY="75.0" text="Tipo de presentación" />
+                              <TextField fx:id="txtPresentacion" layoutX="290.0" layoutY="71.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabMedicamento" text="Medicamentos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="556.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="94.0" layoutY="317.0" prefHeight="48.0" prefWidth="369.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#limpiarMedicamentos" text="Nuevo" />
+                                    <Button fx:id="btnGuardarMedicamento" mnemonicParsing="false" onAction="#guardarMedicamento" text="Guardar" />
+                                    <Button fx:id="btnActualizarMedicamento" disable="true" mnemonicParsing="false" onAction="#actualizarMedicamento" text="Actualizar" />
+                                    <Button fx:id="btnEliminarMedicamento" disable="true" mnemonicParsing="false" onAction="#eliminarMedicamento" text="Eliminar" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tblMedicamento" layoutX="109.0" layoutY="148.0" prefHeight="150.0" prefWidth="338.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoMedicamento" prefWidth="62.0" text="Código" />
+                                    <TableColumn fx:id="clmnnombreMedicamento" minWidth="2.0" prefWidth="86.0" text="Medicamento" />
+                                    <TableColumn fx:id="clmnpresentacionM" minWidth="2.0" prefWidth="91.0" text="Presentación" />
+                                 </columns>
+                              </TableView>
+                              <GridPane layoutX="109.0" layoutY="49.0" prefHeight="66.0" prefWidth="271.0">
+                                 <children>
+                                    <Label text="Nombre medicamento">
+                                       <padding>
+                                          <Insets right="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Presentación" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <ComboBox fx:id="cboPresentacion" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtMedicamento" GridPane.columnIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="127.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="144.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabExamen" text="Exámenes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="556.0">
+                           <children>
+                              <TextField fx:id="txtExamen" layoutX="267.0" layoutY="68.0" />
+                              <Label layoutX="142.0" layoutY="72.0" text="Nombre del examen">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <TableView fx:id="tblExamen" layoutX="158.0" layoutY="144.0" prefHeight="150.0" prefWidth="241.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoExamen" prefWidth="62.0" text="Código" />
+                                    <TableColumn fx:id="clmnnombreExamen" minWidth="2.0" prefWidth="86.0" text="Examen" />
+                                 </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="94.0" layoutY="312.0" prefHeight="48.0" prefWidth="369.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#limpiarExamen" text="Nuevo" />
+                                    <Button fx:id="btnGuardarExamen" mnemonicParsing="false" onAction="#guardarExamen" text="Guardar" />
+                                    <Button fx:id="btnActualizarExamen" disable="true" mnemonicParsing="false" onAction="#actualizarExamen" text="Actualizar" />
+                                    <Button fx:id="btnEliminarExamen" disable="true" mnemonicParsing="false" onAction="#eliminarExamen" text="Eliminar" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabDiagnostico" text="Diagnósticos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="378.0" prefWidth="556.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="107.0" layoutY="316.0" prefHeight="48.0" prefWidth="369.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#limpiarDiagnostico" text="Nuevo" />
+                                    <Button fx:id="btnGuardarDiagnostico" mnemonicParsing="false" onAction="#guardarDiagnostico" text="Guardar" />
+                                    <Button fx:id="btnActualizarDiagnostico" disable="true" mnemonicParsing="false" onAction="#actualizarDiagnostico" text="Actualizar" />
+                                    <Button fx:id="btnEliminarDiagnostico" disable="true" mnemonicParsing="false" onAction="#eliminarDiagnostico" text="Eliminar" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tblDiagnostico" layoutX="158.0" layoutY="154.0" prefHeight="150.0" prefWidth="241.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoDiagnostico" prefWidth="62.0" text="Código" />
+                                    <TableColumn fx:id="clmnnombreDiagnostico" minWidth="2.0" prefWidth="86.0" text="Diagnóstico" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="126.0" layoutY="80.0" text="Nombre del diagnóstico">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="txtDiagnostico" layoutX="260.0" layoutY="76.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabTipoSangre" text="Tipos de Sangre">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="376.0" prefWidth="556.0">
+                           <children>
+                              <TextField fx:id="txtTipoSangre" layoutX="282.0" layoutY="66.0" />
+                              <Label layoutX="126.0" layoutY="70.0" text="Nombre del tipo de sangre">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <TableView fx:id="tblTipoSangre" layoutX="158.0" layoutY="144.0" prefHeight="150.0" prefWidth="241.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoTipoSangre" prefWidth="62.0" text="Código" />
+                                    <TableColumn fx:id="clmnnombreTipoSangre" minWidth="2.0" prefWidth="104.0" text="Tipo de Sangre" />
+                                 </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="94.0" layoutY="314.0" prefHeight="48.0" prefWidth="369.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#limpiarTipoSangre" text="Nuevo" />
+                                    <Button fx:id="btnGuardarTipoSangre" mnemonicParsing="false" onAction="#guardarTipoSangre" text="Guardar" />
+                                    <Button fx:id="btnActualizarTipoSangre" disable="true" mnemonicParsing="false" onAction="#actualizarTipoSangre" text="Actualizar" />
+                                    <Button fx:id="btnEliminarTipoSangre" disable="true" mnemonicParsing="false" onAction="#eliminarTipoSangre" text="Eliminar" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

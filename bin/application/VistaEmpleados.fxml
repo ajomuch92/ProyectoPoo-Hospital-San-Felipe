@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControladorEmpleados">
+   <children>
+      <TabPane prefHeight="642.0" prefWidth="721.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Empleado">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="608.0" styleClass="table-row-cell">
+                     <children>
+                        <GridPane layoutX="-20.0" layoutY="47.0" prefHeight="278.0" prefWidth="352.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="161.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="173.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Número de Identidad">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <Label text="Nombre" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <Label text="Apellido" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <Label text="Género" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <Label text="Fecha Nacimiento" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextField fx:id="txtIdentidad" promptText="       -    -  " GridPane.columnIndex="1" />
+                              <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="dtpFecha" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Edad" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextField fx:id="txtEdad" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Telefono casa" GridPane.rowIndex="6">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextField fx:id="txtFijo" prefHeight="35.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label text="Celular" GridPane.rowIndex="7">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextField fx:id="txtCelular" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <ComboBox fx:id="cboGenero" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="360.0" layoutY="59.0" prefHeight="124.0" prefWidth="346.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="94.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="252.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Horario" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <Label GridPane.rowIndex="2" />
+                              <Label text="Área" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextField fx:id="horario" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Direccion">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <TextArea fx:id="txtDireccion" prefHeight="37.0" prefWidth="145.0" GridPane.columnIndex="1" />
+                              <Label prefHeight="17.0" prefWidth="61.0" text="Contraseña" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin></Label>
+                              <ComboBox fx:id="cboArea" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <PasswordField fx:id="txtContrasena" />
+                                    <CheckBox fx:id="chkEditar" disable="true" mnemonicParsing="false" text="Editar" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tblInformacion" layoutX="5.0" layoutY="327.0" prefHeight="210.0" prefWidth="710.0">
+                          <columns>
+                              <TableColumn fx:id="clmnnumeroEmpleado" prefWidth="92.0" text="No. Empleado" />
+                              <TableColumn fx:id="clmnidentidad" prefWidth="104.0" text="Identidad" />
+                            <TableColumn fx:id="clmnnombre" prefWidth="233.0" text="Nombre" />
+                              <TableColumn fx:id="clmnapellido" prefWidth="186.0" text="Apellido" />
+                            <TableColumn fx:id="clmnarea" prefWidth="94.0" text="Área" />
+                          </columns>
+                        </TableView>
+                        <TabPane fx:id="tbpEmpleado" disable="true" layoutX="374.0" layoutY="183.0" prefHeight="142.0" prefWidth="333.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tbMedico" disable="true" text="Medico">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="114.0" prefWidth="333.0">
+                                       <children>
+                                          <GridPane layoutX="29.0" layoutY="14.0" prefHeight="90.0" prefWidth="238.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="105.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="121.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="No. colegio medico">
+                                                   <padding>
+                                                      <Insets right="5.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label text="No. de consultorio" GridPane.rowIndex="1">
+                                                   <padding>
+                                                      <Insets right="5.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label text="Especialidad" GridPane.rowIndex="2">
+                                                   <padding>
+                                                      <Insets right="5.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="txtNoColegioMedico" GridPane.columnIndex="1" />
+                                                <TextField fx:id="txtConsultorio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="cboEspecialidad" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tbEnfermero" disable="true" text="Enfermero">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane layoutX="25.0" layoutY="14.0" prefHeight="30.0" prefWidth="274.0">
+                                             <children>
+                                                <Label text="No. Colegio Enfermería">
+                                                   <padding>
+                                                      <Insets right="5.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="txtNoColegioEnfermeria" prefHeight="25.0" prefWidth="142.0" GridPane.columnIndex="1" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="124.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="102.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                        <ToolBar prefHeight="47.0" prefWidth="721.0">
+                           <items>
+                              <Button fx:id="bntNuevo" mnemonicParsing="false" onAction="#Limpiar" prefHeight="25.0" prefWidth="57.0" text="Nuevo" />
+                              <Button fx:id="bntGuardar" mnemonicParsing="false" onAction="#GuardarArchivo" prefHeight="25.0" prefWidth="68.0" text="Guardar" />
+                              <Button fx:id="bntEliminar" disable="true" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="62.0" text="Eliminar" />
+                              <Button fx:id="bntActualizar" disable="true" mnemonicParsing="false" onAction="#actualizarRegistro" prefHeight="25.0" prefWidth="73.0" text="Actualizar" />
+                              <Button fx:id="bntsalir" mnemonicParsing="false" onAction="#volver" prefHeight="25.0" prefWidth="59.0" text="salir" />
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Area/Especialidad">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="609.0" prefWidth="721.0">
+                           <children>
+                              <GridPane layoutX="88.0" layoutY="86.0">
+                                 <children>
+                                    <Label text="Nombre del área">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <TextField fx:id="txtArea" GridPane.columnIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <TableView fx:id="tblArea" layoutX="359.0" layoutY="52.0" prefHeight="158.0" prefWidth="310.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoArea" prefWidth="75.0" text="Código" />
+                                    <TableColumn fx:id="clmnnombreArea" prefWidth="123.0" text="Nombre" />
+                                 </columns>
+                              </TableView>
+                              <Separator layoutY="279.0" prefHeight="3.0" prefWidth="721.0" />
+                              <ToolBar layoutX="-1.0" layoutY="279.0" prefHeight="35.0" prefWidth="721.0">
+                                 <items>
+                                    <Button fx:id="bntNuevoEspecialidad" mnemonicParsing="false" onAction="#limpiarEspecialidad" text="Nuevo" />
+                                    <Button fx:id="bntGuardarEspecialidad" mnemonicParsing="false" onAction="#guardarEspecialidad" text="Guardar" />
+                                    <Button fx:id="bntActualizarEspecialidad" disable="true" mnemonicParsing="false" onAction="#actualizarEspecialiad" text="Actualizar" />
+                                    <Button fx:id="bntEliminarEspecialidad" disable="true" mnemonicParsing="false" onAction="#eliminarEspecialidad" text="Eliminar" />
+                                 </items>
+                              </ToolBar>
+                              <TableView fx:id="tblEspecialidad" layoutX="359.0" layoutY="347.0" prefHeight="200.0" prefWidth="311.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmncodigoEspecialidad" prefWidth="75.0" text="Código" />
+                                    <TableColumn fx:id="clmnnombreEspecialidad" prefWidth="75.0" text="Especialidad" />
+                                 </columns>
+                              </TableView>
+                              <GridPane layoutX="48.0" layoutY="358.0" prefHeight="78.0" prefWidth="280.0">
+                                 <children>
+                                    <Label text="Especialidad" />
+                                    <Label text="Descripcion" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtnombreEspecialidad" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txtDescripcion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="142.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="138.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <ToolBar layoutX="-4.0" layoutY="-6.0" prefHeight="40.0" prefWidth="731.0">
+                                 <items>
+                                    <Button mnemonicParsing="false" onAction="#limpiarArea" text="Nuevo" />
+                                    <Button fx:id="btnGuardarArea" mnemonicParsing="false" onAction="#guardarArea" text="Guardar" />
+                                    <Button fx:id="btnActualizarArea" disable="true" mnemonicParsing="false" onAction="#actualizarArea" text="Actualizar" />
+                                    <Button fx:id="btnEliminarArea" disable="true" mnemonicParsing="false" onAction="#eliminarArea" text="Eliminar" />
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <styleClass>
+      <String fx:value="context-menu" />
+      <String fx:value="button" />
+      <String fx:value="column-header" />
+      <String fx:value="table-view" />
+      <String fx:value="text-field" />
+      <String fx:value="label-bright" />
+      <String fx:value="column-header-background" />
+   </styleClass>
+</AnchorPane>

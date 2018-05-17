@@ -1,0 +1,15 @@
+Estos son los codigos de usuario y contraseñas que se utilizan dentro del sistema.
+La exportación al archivo JAR falló(se incluye) pero no abre.
+CÓDIGO_USUARIO  	CONTRASEÑA
+1			Uno
+2			Dos
+3			Tres
+4			Cuatro
+5			Cinco
+6			Seis
+7			Siete
+
+Note que la primera letra es mayúscula
+Cuando se quiere editar una contraseña, se debe marcar el CheckBox de editar de la par del campo de contraseña.
+
+Incluimos el mayor tipo de validaciones posibles
